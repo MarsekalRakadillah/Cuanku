@@ -1,5 +1,6 @@
 package com.marsekal.cuanku
 
+import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,8 @@ import androidx.room.Room
 import com.marsekal.cuanku.databinding.ActivityAddTransactionBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 
 class AddTransactionActivity : AppCompatActivity() {
 
@@ -53,8 +56,24 @@ class AddTransactionActivity : AppCompatActivity() {
 
         }
 
-    }
+        val myCalendar = Calendar.getInstance()
 
+        val datePicker = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+            myCalendar.set(Calendar.YEAR, year)
+            myCalendar.set(Calendar.MONTH, month)
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateLable(myCalendar)
+        }
+
+        binding.tilDate.setOnClickListener {
+            DatePickerDialog(this, datePicker, myCalendar.get(Calendar.YEAR),
+                myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
+        var date = Date()
+        var simpleDate = SimpleDateFormat("HH:mm")
+
+    }
 
     private fun insert(transactions: Transactions) {
         val db = Room.databaseBuilder(this,
@@ -64,4 +83,11 @@ class AddTransactionActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    private fun updateLable(myCalendar: Calendar) {
+        val sdf = SimpleDateFormat("d/M/yyyy", Locale.JAPANESE)
+        binding.tilDate.setText(sdf.format(myCalendar.time))
+    }
+
+
 }
