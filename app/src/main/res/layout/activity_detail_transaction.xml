@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutDetail"
+    tools:context=".DetailTransactionActivity">
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_close"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <LinearLayout
+        android:id="@+id/llDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLabel"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Label"
+            app:errorEnabled="true"
+            app:boxStrokeWidth="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ietLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/label_selector"
+                android:drawablePadding="10dp"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAmount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            app:errorEnabled="true"
+            app:boxStrokeWidth="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ietAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/money_selector"
+                android:drawablePadding="10dp"
+                android:inputType="number|numberSigned"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            app:errorEnabled="true"
+            app:boxStrokeWidth="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ietDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/description_selector"
+                android:drawablePadding="10dp"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnUpdateTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Transaction"
+        android:layout_marginHorizontal="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/llDetail"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
