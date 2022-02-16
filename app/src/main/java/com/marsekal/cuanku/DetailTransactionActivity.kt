@@ -11,6 +11,7 @@ import androidx.room.Room
 import com.marsekal.cuanku.databinding.ActivityDetailTransactionBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.*
 
 class DetailTransactionActivity : AppCompatActivity() {
 
@@ -64,7 +65,9 @@ class DetailTransactionActivity : AppCompatActivity() {
             else if (amount == null)
                 binding.tilAmount.error = "Tolong isi jumlah"
             else {
-                val transactions = Transactions(transaction.id, label, amount, descrip)
+                val transactions = Transactions(transaction.id, label, amount, descrip
+//                ,Calendar.getInstance().time
+                )
                 update(transactions)
             }
 

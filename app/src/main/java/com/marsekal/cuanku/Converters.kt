@@ -2,21 +2,22 @@ package com.marsekal.cuanku
 
 import androidx.room.TypeConverter
 import java.text.SimpleDateFormat
+import java.util.*
 
 class Converters {
 
     @TypeConverter
-    fun fromTimestamp(timeStamp: Long?): String? {
-        return timeStamp?.let { FORMATTER.format(timeStamp) }
+    fun toDate(dateLong: Long?): Date? {
+        return dateLong?.let { Date(it) }
     }
 
     @TypeConverter
-    fun dateToTimestamp(timeStamp: String?): Long? {
-        return timeStamp?.let { FORMATTER.parse(it)?.time }
+    fun fromDate(date: Date?): Long? {
+        return date?.time?.toLong()
     }
 
-    companion object{
-
-        val FORMATTER = SimpleDateFormat("yyy-MM-dd")
-    }
+//    companion object{
+//
+//        val FORMATTER = SimpleDateFormat("yyy-MM-dd")
+//    }
 }

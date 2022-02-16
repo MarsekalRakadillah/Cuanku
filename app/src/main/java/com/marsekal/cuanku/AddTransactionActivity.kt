@@ -50,9 +50,13 @@ class AddTransactionActivity : AppCompatActivity() {
                 binding.tilAmount.error = "Tolong isi jumlah"
             }
             else {
-                val transactions = Transactions(0, label, amount, descrip)
+                val transactions = Transactions(0, label, amount, descrip
+//                ,Calendar.getInstance().time
+                )
                 insert(transactions)
             }
+
+
 
         }
 
@@ -73,6 +77,7 @@ class AddTransactionActivity : AppCompatActivity() {
         var date = Date()
         var simpleDate = SimpleDateFormat("HH:mm")
 
+        val sdf = SimpleDateFormat("dd/MM/yyyy", Locale.JAPANESE)
     }
 
     private fun insert(transactions: Transactions) {
