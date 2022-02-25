@@ -61,23 +61,35 @@
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tilDate"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
-            android:fontFamily="sans-serif"
-            android:gravity="start"
-            android:padding="15dp"
-            android:text="Date"
-            android:textAllCaps="false"
-            android:textStyle="normal"
-            app:errorEnabled="true"
-            app:icon="@drawable/money_selector"
-            app:iconPadding="10dp"
-            app:strokeColor="@color/purple_500">
-        </com.google.android.material.button.MaterialButton>
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tilDate"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:padding="15dp"
+                android:text="Choose Date"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                app:errorEnabled="true"
+                app:icon="@drawable/money_selector"
+                app:iconPadding="10dp"
+                app:strokeColor="@color/purple_500">
+            </com.google.android.material.button.MaterialButton>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello word"
+                android:textSize="16dp">
+            </com.google.android.material.textview.MaterialTextView>
+        </LinearLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilDescription"

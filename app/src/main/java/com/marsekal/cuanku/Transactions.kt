@@ -13,5 +13,5 @@ data class Transactions(
     val amount: Double,
     val description: String,
 //    @TypeConverters(Converters::class)
-//    val date: Date
+//    val date: String
 ): Serializable
