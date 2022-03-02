@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
-import androidx.room.RoomDatabase
+import com.marsekal.cuanku.adapter.TransactionsAdapter
+import com.marsekal.cuanku.database.TransactionDB
+import com.marsekal.cuanku.database.Transactions
 import com.marsekal.cuanku.databinding.ActivityMainBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

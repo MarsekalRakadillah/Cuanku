@@ -1,4 +1,4 @@
-package com.marsekal.cuanku
+package com.marsekal.cuanku.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

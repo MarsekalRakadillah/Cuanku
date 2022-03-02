@@ -1,7 +1,6 @@
-package com.marsekal.cuanku
+package com.marsekal.cuanku.database
 
 import androidx.room.TypeConverter
-import java.text.SimpleDateFormat
 import java.util.*
 
 class Converters {

@@ -1,6 +1,6 @@
-package com.marsekal.cuanku
+package com.marsekal.cuanku.database
 
-class DataClassMont {
+class DataClassMonth {
 
     var monthName: String = ""
     var monthAmount: String =  ""

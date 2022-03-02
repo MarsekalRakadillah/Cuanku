@@ -3,15 +3,15 @@ package com.marsekal.cuanku
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.InputDevice
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.widget.addTextChangedListener
 import androidx.room.Room
+import com.marsekal.cuanku.database.TransactionDB
+import com.marsekal.cuanku.database.Transactions
 import com.marsekal.cuanku.databinding.ActivityDetailTransactionBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.util.*
 
 class DetailTransactionActivity : AppCompatActivity() {
 

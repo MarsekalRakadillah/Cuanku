@@ -1,4 +1,4 @@
-package com.marsekal.cuanku
+package com.marsekal.cuanku.database
 
 import android.content.Context
 import androidx.room.*

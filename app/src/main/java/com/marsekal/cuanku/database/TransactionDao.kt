@@ -1,6 +1,7 @@
-package com.marsekal.cuanku
+package com.marsekal.cuanku.database
 
 import androidx.room.*
+import com.marsekal.cuanku.database.Transactions
 
 @Dao
 interface TransactionDao {
