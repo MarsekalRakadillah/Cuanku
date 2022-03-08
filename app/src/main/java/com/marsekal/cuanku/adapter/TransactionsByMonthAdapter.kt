@@ -13,7 +13,7 @@ import com.marsekal.cuanku.databinding.TransactionsByMonthLayoutBinding
 import java.text.DecimalFormat
 
 class TransactionsByMonthAdapter(
-        private var monthTransactions: List<DataClassByMonth>
+        private var monthTransactions: ArrayList<DataClassByMonth>
 ): RecyclerView.Adapter<TransactionsByMonthAdapter.TransactionHolder>() {
 
     class TransactionHolder(val binding: TransactionsByMonthLayoutBinding) : RecyclerView.ViewHolder(binding.root)
@@ -51,7 +51,7 @@ class TransactionsByMonthAdapter(
 
     override fun getItemCount() = monthTransactions.size
 
-    fun setData(monthTransactions: List<DataClassByMonth>) {
+    fun setData(monthTransactions: ArrayList<DataClassByMonth>) {
         this.monthTransactions = monthTransactions
         notifyDataSetChanged()
     }
